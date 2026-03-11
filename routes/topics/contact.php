@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Contact\ContactController;
 
 // Using Our Routes Without Controllers
 // Route::method('/route', function(){});
