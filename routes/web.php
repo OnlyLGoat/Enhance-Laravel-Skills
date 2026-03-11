@@ -7,3 +7,5 @@ Route::get('/', function () {
 });
 
 require __DIR__. '/topics/contact.php';
+
+require __DIR__. '/topics/order_management.php';

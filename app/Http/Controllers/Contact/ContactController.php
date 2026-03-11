@@ -10,11 +10,11 @@ class ContactController extends Controller
 {
     public function showMessages (){
         // Pass Our Messages To The Messages View
-        return view('messages', ['messages' => Message::all()]);
+        return view('Contact.messages', ['messages' => Message::all()]);
     }
 
     public function showForm() {
-        return view('contact');
+        return view('Contact.contact');
     }
 
     public function storeMessage(Request $req) {
