@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('designation');
             $table->decimal('prix', 10, 2);
             $table->integer('qte_stock');
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 
