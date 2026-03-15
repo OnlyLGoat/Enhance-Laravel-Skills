@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -23,6 +24,9 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    // This If We Have A Primary Key With Another Name
+    // protected $primaryKey = 'owner_id';
 
     /**
      * The attributes that should be hidden for serialization.
@@ -47,8 +51,25 @@ class User extends Authenticatable
         ];
     }
 
+    // One To One Relationship
     public function house(): HasOne
     {
+        // This If We Have A Primary Key With Another Name
+        // user_id Is A FK and owner_id Is A PK
+        
+        // return $this->hasOne(House::class, 'user_id', 'owner_id');
+
         return $this->hasOne(House::class);
+    }
+
+    // One To Many Relationship
+    public function houses(): HasMany
+    {
+        // This If We Have A Primary Key With Another Name
+        // user_id Is A FK and owner_id Is A PK
+
+        // return $this->hasMany(House::class, 'user_id', 'owner_id');
+
+        return $this->hasMany(House::class);
     }
 }
