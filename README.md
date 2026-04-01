@@ -1,4 +1,6 @@
-# Enhance-Laravel-Skills
+![Alt](https://repobeats.axiom.co/api/embed/0aa89cd2e68f470f45f0eeee34f4a688b3aa7c42.svg "Repobeats analytics image")
+
+# Enhance Laravel Skills
 
 A learning project built with Laravel, focusing on implementing core web application features like Contact forms and Order Management.
 
